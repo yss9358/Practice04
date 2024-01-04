@@ -34,7 +34,13 @@ public class Ex07 {
 		int won = sc.nextInt();
 		
 		
+		
 		for (int i=0; i<wonArray.length; i++) {
+			
+			if(won-wonArray[i]>0) {
+				System.out.println(wonArray[i]+"원:"+"개");
+				
+			}
 		
 			
 		}
