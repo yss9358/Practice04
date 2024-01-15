@@ -1,5 +1,8 @@
 package com.javaex.practice;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Ex08 {
 
 	public static void main(String[] args) {
@@ -13,26 +16,26 @@ public class Ex08 {
 		 -미니로또 (중복체크 할 것)
 		
 		*/
-		int[] num = new int[45];
-		int x =0;
 		
-		for (int i=0; i<num.length; i++) {
-			x = x+1;
-			num[i] = x;
+		// (int)(Math.random()*45+1); // 45개중에 랜덤 한개 고르는 방식
+		
+		// Set 은 값을 저장하는 방식 . HashSet 중복된 값을 저장하지 않음.
+		Set<Integer> lotto = new HashSet<Integer>();
+		
+		// 랜덤방식을 통해 중복없이 6개의 값을 추출하기 위한 조건문
+		// 6개를 추출하면 조건문 탈출.
+		while(true) {
+			int i = (int)(Math.random()*45+1);
+			lotto.add(i);
+			if(lotto.size()>=6) {
+				break;
+			}
 			
 		}
-		
-		/* 확인용
-		for (int i=0; i<num.length; i++) {
-			System.out.println(num[i]);
+	    // lotto 안에서 6개의 번호를 추출.
+ 		for(Integer lottono : lotto) {
+			System.out.println(lottono);
 		}
-		*/
-		int no = (int)(Math.random()*45)+1;
-		for (int i=0; i<6; i++) {
-			System.out.println(num[no]);
-		}
-		
-		
 		
 		
 		

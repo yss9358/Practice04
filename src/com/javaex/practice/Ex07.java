@@ -33,19 +33,14 @@ public class Ex07 {
 		System.out.print("금액:" );
 		int won = sc.nextInt();
 		
-		
-		
 		for (int i=0; i<wonArray.length; i++) {
-			
-			if(won-wonArray[i]>0) {
-				System.out.println(wonArray[i]+"원:"+"개");
-				
-			}
-		
-			
+			int result = won/wonArray[i]; // 입력받은 금액이 i번째 값으로 나누어지면 그 몫이 결과값이 됨.
+			if(result>0) { // 67879를 50000으로 나누면 몫 1 , 나머지 17879
+				System.out.println(wonArray[i] + "원:" + result + "개");
+			won = won%wonArray[i]; // 입력받은값에서 i번째 값으로 나누고 난 나머지를 또 계산해야함
+			}                      // 그 나머지값을 다시 나누어서 나누어지면 결과값을 나타내고 반복
+						
 		}
-		
-		
 		
 		sc.close();
 
