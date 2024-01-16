@@ -26,7 +26,7 @@ public class Ex08 {
 		// 6개를 추출하면 조건문 탈출.
 		while(true) {
 			int i = (int)(Math.random()*45+1);
-			lotto.add(i);
+			lotto.add(i); // 6개의 주소값을 저장.
 			if(lotto.size()>=6) {
 				break;
 			}
